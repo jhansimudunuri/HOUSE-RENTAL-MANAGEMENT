@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Login And Registration</title>
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<div class="hero">
+<div class="form-box">
+<div class="button-box">
+<div id="btn"> </div>
+<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+<button type="button" class="toggle-btn" onclick="register()">Register</button>
+</div>
+<form action="validation.php" id="login"  method="POST" class="input-group">
+<input type="text" class="input-field" name="user" placeholder="User Id" required><br>
+<input type="password" class="input-field" name="password" placeholder="Enter Password" required><br>
+<button type="submit" name="login" class="submit-btn">Log In</button>
+</form>
+<form  action="reg.php" method="POST" id="register" class="input-group">
+<input type="text" class="input-field" name="user" id="uname" placeholder="User Id" required><br>
+<input type="password" class="input-field" name="password" id="password" placeholder="Enter Password" required><br>
+<button type="submit"  name="register" class="submit-btn">Register</button>
+</form>
+</div>
+</div>
+<script>
+var x = document.getElementById("login");
+var y = document.getElementById("register");
+var z = document.getElementById("btn");
+function register(){
+x.style.left = "-400px";
+y.style.left = "50px";
+z.style.left = "110px";
+}
+function login(){
+x.style.left = "50px";
+y.style.left = "450px";
+z.style.left = "0px";
+}
+</script>
+</body>
+</html>
